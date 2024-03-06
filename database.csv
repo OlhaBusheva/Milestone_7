@@ -1,0 +1,31 @@
+id,name,hiring_date,department,birthday
+1,Jason Williams,2022-04-01,HR,1958-06-12
+2,Taylor White,2020-08-15,Marketing,1992-07-14
+3,Dr. Brittany Chen DVM,2023-06-06,Marketing,1993-06-01
+4,Tiffany Thompson,2020-08-13,Sels,1967-06-18
+5,Tami Marsh DDS,2021-04-17,Marketing,1973-03-25
+6,Timothy Garcia,2021-01-04,IT,1999-12-01
+7,Zachary Riley,2022-03-30,IT,1985-02-27
+8,Brandon Mullins,2019-05-03,IT,1959-05-08
+9,Daniel Patel,2021-09-22,IT,1969-03-13
+10,Mindy Shaw MD,2019-09-06,Marketing,1978-03-13
+11,Kayla Leonard,2022-06-13,HR,1985-01-16
+12,Julie Young,2022-09-25,IT,2003-07-25
+13,Melissa Sexton,2020-04-26,Sels,1965-03-09
+14,David Smith,2022-03-29,Sels,1994-01-16
+15,Richard Williams,2023-10-29,HR,1997-05-22
+16,Jill Jones,2020-06-29,Marketing,1995-10-22
+17,Kim Jones,2020-11-03,Sels,1969-03-26
+18,Charles Watkins,2020-06-17,IT,1985-01-27
+19,Theresa Beasley,2019-10-16,Marketing,1974-04-09
+20,Monique Wilson,2019-09-08,Marketing,1996-09-22
+21,Melinda Hart,2022-02-13,IT,1964-11-30
+22,Paige Potts,2022-09-17,Sels,1978-02-28
+23,Sydney Kramer,2021-03-16,Sels,2004-06-06
+24,Cynthia Smith,2022-02-27,HR,1971-07-31
+25,Olivia Lopez MD,2020-03-22,Marketing,1981-12-04
+26,Todd Stewart,2022-08-22,IT,1994-08-15
+27,Sarah Hudson,2021-05-31,IT,2002-04-25
+28,Cindy Klein,2020-06-05,IT,1982-05-12
+29,Kim Bryant,2021-03-03,Sels,1976-12-27
+30,Brett Adkins,2019-11-28,Sels,1980-02-14
