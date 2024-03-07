@@ -12,46 +12,22 @@ def load_data():
     return DB
 
 
-def birthday_employees(DB, month, department):
-    filtered_employees = []
-    for employee in DB:
-        if employee['department'] == department:
-            birthday = datetime.strptime(employee['birthday'], "%Y-%m-%d")
-            if birthday.month == month:
-                filtered_employees.append({
-                    "id": employee['id'],
-                    "name": employee['name'],
-                    "birthday": birthday.strftime("%b %d")
-                })
-    return filtered_employees
-
-
-def hiring_employees(DB, month, department):
-    filtered_employees = []
-    for employee in DB:
-        if employee['department'] == department:
-            hiring_date = datetime.strptime(
-                employee['hiring_date'], "%Y-%m-%d"
-                )
-            if hiring_date.month == month:
-                filtered_employees.append({
-                    "id": employee['id'],
-                    "name": employee['name'],
-                    "hiring_date": hiring_date.strftime("%b %d")
-                })
-    return filtered_employees
-
-
 @app.route('/birthdays', methods=['GET'])
 def get_birthdays():
     month = int(request.args.get('month'))
     department = request.args.get('department')
     DB = load_data()
-    filtered_employees = birthday_employees(DB, month, department)
-    response = {
-        "total": len(filtered_employees),
-        "employees": filtered_employees
-    }
+    response = {"total": 0,
+                "employees": []}
+    for employee in DB:
+        if employee['department'] == department:
+            birthday = datetime.strptime(employee['birthday'], "%Y-%m-%d")
+            if birthday.month == month:
+                response["total"] += 1
+                new_row = {"id": employee['id'],
+                           "name": employee['name'],
+                           "birthday": birthday.strftime("%b %d")}
+                response["employees"].append(new_row)
     return jsonify(response)
 
 
@@ -60,11 +36,17 @@ def get_anniversaries():
     month = int(request.args.get('month'))
     department = request.args.get('department')
     DB = load_data()
-    filtered_employees = hiring_employees(DB, month, department)
-    response = {
-        "total": len(filtered_employees),
-        "employees": filtered_employees
-    }
+    response = {"total": 0,
+                "employees": []}
+    for employee in DB:
+        if employee['department'] == department:
+            hiring_date = datetime.strptime(employee['hiring_date'], "%Y-%m-%d")
+            if hiring_date.month == month:
+                response["total"] += 1
+                new_row = {"id": employee['id'],
+                           "name": employee['name'],
+                           "hiring_date": hiring_date.strftime("%b %d")}
+                response["employees"].append(new_row)
     return jsonify(response)
 
 
